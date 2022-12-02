@@ -63,6 +63,7 @@ def P(p):
 button( bind=P, text='Recomeçar',pos = scene.title_anchor )
 
 ### Constantes que o usuário deverá colocar
+### NÃO DEVE-SE USAR VÍRGULA E SIM PONTO PARA INDICAR CASA DECIMAL
 g = float(input('Dê o valor da aceleração vertical para baixo:'))
 m = float(input('Dê o valor da massa da bola (maior do que 0):'))
 k = float(input('Dê o valor da constante de resistência do ar'))
@@ -75,7 +76,8 @@ while True:
     if começar == True:
         dt = 0.05
         if bola.pos.y>=rampa_x.pos.y+bola.radius:
-            bola.f = norm(rampa_h.axis) * (m*-g*sin(theta)/m) - ((k*bola.v*(area/10))/m)
+            far = ((1/2)*k*area*bola.v*mag(bola.v)*0.2)
+            bola.f = norm(rampa_h.axis) * (m*-g*sin(theta)/m) - (far/m)
             bola.v += bola.f *dt
             bola.pos += bola.v *dt
             print('Velocidade:', mag(bola.v))
