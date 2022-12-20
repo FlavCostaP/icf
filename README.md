@@ -4,5 +4,7 @@ Para um bom uso, recomenda-se que a simulação seja apenas um auxiliar ao exper
 
 Ao iniciar o programa, deverá ser informado unidades de aceleração, massa e coeficiente de resistência (todos como ponto flutuantes em unidades arbitrárias, sendo a massa necessariamente diferente de 0). Decidida tais constantes, o usuário poderá customizar o raio da bola e as dimensões da rampa. Para que a física comece a funcionar, basta apertar o botão "começar" e para parar, o botão "pausar"; para reposicionar a bola é necessário que pare a física e aperte o botão "recomeçar". Deve-se manter em mente possíveis arredondamentos e pequenas diferenças entre experimentos devido erros computacionais.
 
+Detalhe: todas as unidades são arbitrarias por acreditarmos que isso proporcionará uma maior liberdade ao usuário. Como exemplo: caso queiramos considerar uma rampa cuja altura é de 20 centímetros, podemos considerar a gravidade como sendo 0.098; caso a rampa fosse de 20 metros, consideraríamos uma aceleração de 9.8. Utilizando equações de energia potencial gravitacional, vemos que são expressões equivalentes: Energia potencial = mgh; m*9.8*0.2 = m*0.98*2 = m*0.098*20.
+
 Simulação: https://glowscript.org/#/user/flavio/folder/MyPrograms/program/julia
 
